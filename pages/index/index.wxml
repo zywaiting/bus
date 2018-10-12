@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="section">
+  <view class="flex-wrp" style="flex-direction:column;">
+    <view class="flex-item title-item">苏州</view>
+
+    <view class="flex-item input-item">
+      <view class="flex-wrp input-item" style="flex-direction:row;">
+        <view class="zy-input">
+          <input class="weui-input"  maxlength="10" bindinput="bindKeyInput" placeholder="输入同步到view中"/>
+        </view>
+        <view class="zy-query">
+          11
+        </view>
+      </view>
+    </view>
+
+    <view class="flex-item bc_blue">3</view>
+    <view class="flex-item bc_green">1</view>
+    <view class="flex-item bc_red">2</view>
+    <view class="flex-item bc_blue">3</view>
+    <view class="flex-item bc_green">1</view>
+    <view class="flex-item bc_red">2</view>
+    <view class="flex-item bc_blue">3</view>
+    <view class="flex-item bc_green">1</view>
+    <view class="flex-item bc_red">2</view>
+    <view class="flex-item bc_blue">3</view>
+  </view>
+</view>

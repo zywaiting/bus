@@ -1,0 +1,28 @@
+/**index.wxss**/
+@import "../../utils/weui.wxss";
+.flex-wrp {display: flex;}
+.title-item {
+  padding-left: 35rpx;
+  background: white;
+  width:100%; 
+  height: 100rpx;
+  font-weight: 450;
+  font-size: 200%
+}
+.input-item{
+  width:100%; 
+  height: 100rpx;
+}
+.zy-input{
+  height: 80rpx;
+  width: 100%;
+  border:1rpx solid gray;
+  padding-left: 100rpx;
+  padding-right: 200rpx;
+}
+.zy-query{
+  padding-top: 100rpx;
+}
+.bc_green {background: green;width:100%; height: 100rpx;}
+.bc_red {background: red;width:100%; height: 100rpx;}
+.bc_blue {background: blue;width:100%; height: 100rpx;}
