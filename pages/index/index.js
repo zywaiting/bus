@@ -4,7 +4,8 @@ const app = getApp()
 
 Page({
   data: {
-    
+    busname:'',
+    busConfigList:[]
   },
   //事件处理函数
   bindViewTap: function() {
@@ -17,7 +18,7 @@ Page({
     wx.login({
       success: code => {
         wx.request({
-          url: 'https://www.zhuyao.xin/onLoginAll',
+          url: app.globalData.url +'/onLoginAll',
           data: {
             code: code.code,
             express: 'bus',
@@ -34,9 +35,30 @@ Page({
       }
     })
   },
-  bindKeyInput: function (e) {
-    this.setData({
-      inputValue: e.detail.value
+  searchCar: function () {
+    var that = this;
+    wx.request({
+      url: app.globalData.url +'/api/busconfig',
+      data: {
+        openid: app.globalData.openid,
+        busname: that.data.busname,
+        crity: app.globalData.crity
+      },
+      success: function (res) {
+        console.log(res.data.data);
+        that.setData({
+          busConfigList: res.data.data
+        })
+      },
+      fail: function (res) {
+        console.log("--------fail--------");
+      }
     })
   },
+  getCarNo: function (e){
+    var that = this;
+    that.setData({
+      busname:e.detail.value
+    })
+  }
 })

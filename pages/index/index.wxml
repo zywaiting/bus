@@ -4,133 +4,35 @@
     <view class="flex-item title-item">苏州</view>
 
     <view class="flex-item input-item">
-        <view class='page_row' bindtap="suo">
+        <view class='page_row' >
           <view class="search">
             <view class="df search_arr">
               <icon class="searchcion" size='20' type='search'></icon>
-              <input class=""  placeholder="请输入关键字" value="{{searchValue}}"/>
+              <input class=""  placeholder="请输入关键字" value="{{searchValue}}"bindinput="getCarNo"/>
             </view>
           </view>
-        <view class='sousuo'>搜索</view>
+        <view class='sousuo' bindtap="searchCar">搜索</view>
       </view>
     </view>
 
     <view class="flex-item blank"></view>
 
-    <view class="body">
-      <view class="flex-item body-item">
-        <view class='main-content'>
-          <view class='item-content'>
-            <view class='item-main' bindtap="powerDrawer">
-              <text>中石化-全国</text>
-              <text>{{item.name}}</text>
-            </view>
-          </view>
-        </view>
-      </view>
-
-      <view class="flex-item body-item">
-        <view class='main-content'>
-          <view class='item-content'>
-            <view class='item-main' bindtap="powerDrawer">
-              <text>中石化-全国</text>
-              <text>{{item.name}}</text>
-            </view>
-          </view>
-        </view>
-      </view>
-
-      <view class="flex-item body-item">
-        <view class='main-content'>
-          <view class='item-content'>
-            <view class='item-main' bindtap="powerDrawer">
-              <text>中石化-全国</text>
-              <text>{{item.name}}</text>
-            </view>
-          </view>
-        </view>
-      </view>
-
-
-
-
-
-
-
-      <view class="flex-item body-item">
-        <view class='main-content'>
-          <view class='item-content'>
-            <view class='item-main' bindtap="powerDrawer">
-              <text>中石化-全国</text>
-              <text>{{item.name}}</text>
-            </view>
-          </view>
-        </view>
-      </view>
-
-      <view class="flex-item body-item">
-        <view class='main-content'>
-          <view class='item-content'>
-            <view class='item-main' bindtap="powerDrawer">
-              <text>中石化-全国</text>
-              <text>{{item.name}}</text>
-            </view>
-          </view>
-        </view>
-      </view>
-
-      <view class="flex-item body-item">
-        <view class='main-content'>
-          <view class='item-content'>
-            <view class='item-main' bindtap="powerDrawer">
-              <text>中石化-全国</text>
-              <text>{{item.name}}</text>
-            </view>
-          </view>
-        </view>
-      </view>
-
-
-
-
-
-
-
-      <view class="flex-item body-item">
-        <view class='main-content'>
-          <view class='item-content'>
-            <view class='item-main' bindtap="powerDrawer">
-              <text>中石化-全国</text>
-              <text>{{item.name}}</text>
-            </view>
-          </view>
-        </view>
-      </view>
-
-      <view class="flex-item body-item">
-        <view class='main-content'>
-          <view class='item-content'>
-            <view class='item-main' bindtap="powerDrawer">
-              <text>中石化-全国</text>
-              <text>{{item.name}}</text>
-            </view>
-          </view>
-        </view>
-      </view>
-
-      <view class="flex-item body-item">
-        <view class='main-content'>
-          <view class='item-content'>
-            <view class='item-main' bindtap="powerDrawer">
-              <text>中石化-全国</text>
-              <text>{{item.name}}</text>
-            </view>
-          </view>
-        </view>
-      </view>
-      
-    </view>
-
     
+    <view class="body">
+      <block wx:for="{{busConfigList}}">
+        <navigator url='../busway/busway?busid={{item.busId}}&busname={{item.busName}}&beginend={{item.beginEnd}}'>
+          <view class="flex-item body-item">
+            <view class='main-content'>
+              <view class='item-content'>
+                <view class='item-main' bindtap="powerDrawer">
+                  <text>{{item.busName}}</text>
+                  <text>{{item.beginEnd}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </navigator>
+      </block>
+    </view>
   </view>
 </view>

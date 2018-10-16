@@ -79,7 +79,8 @@
 }
 
 .item-main text{
-  font-size: 20rpx;
+  font-weight: 60;
+  font-size: 25rpx;
 }
 
 
