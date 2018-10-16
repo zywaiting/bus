@@ -1,2 +1,34 @@
 <!--pages/personal/personal.wxml-->
-<text>pages/personal/personal.wxml</text>
+
+<view class="flex-item body-item">
+  <view class='main-content'>
+    <view class='item-content'>
+      <view class='item-main' bindtap="powerDrawer">
+        <text>中石化-全国</text>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+<view class="container">
+    
+  <view class='main-content'>
+    <view class='item-content'>
+      <view class='item-main' bindtap="powerDrawer">
+        <text>中石化-全国</text>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+
+    <view class="section section_gap">
+      <scroll-view class="scroll-view_H" scroll-x="true">
+        <view class="scroll-view-item_H" wx:for="{{hotList}}" wx:key="{{item}}" >
+          <view  class="title" >{{item.title}}</view>
+        </view>
+      </scroll-view>
+    </view>
+</view>

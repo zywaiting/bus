@@ -4,25 +4,133 @@
     <view class="flex-item title-item">苏州</view>
 
     <view class="flex-item input-item">
-      <view class="flex-wrp input-item" style="flex-direction:row;">
-        <view class="zy-input">
-          <input class="weui-input"  maxlength="10" bindinput="bindKeyInput" placeholder="输入同步到view中"/>
-        </view>
-        <view class="zy-query">
-          11
-        </view>
+        <view class='page_row' bindtap="suo">
+          <view class="search">
+            <view class="df search_arr">
+              <icon class="searchcion" size='20' type='search'></icon>
+              <input class=""  placeholder="请输入关键字" value="{{searchValue}}"/>
+            </view>
+          </view>
+        <view class='sousuo'>搜索</view>
       </view>
     </view>
 
-    <view class="flex-item bc_blue">3</view>
-    <view class="flex-item bc_green">1</view>
-    <view class="flex-item bc_red">2</view>
-    <view class="flex-item bc_blue">3</view>
-    <view class="flex-item bc_green">1</view>
-    <view class="flex-item bc_red">2</view>
-    <view class="flex-item bc_blue">3</view>
-    <view class="flex-item bc_green">1</view>
-    <view class="flex-item bc_red">2</view>
-    <view class="flex-item bc_blue">3</view>
+    <view class="flex-item blank"></view>
+
+    <view class="body">
+      <view class="flex-item body-item">
+        <view class='main-content'>
+          <view class='item-content'>
+            <view class='item-main' bindtap="powerDrawer">
+              <text>中石化-全国</text>
+              <text>{{item.name}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="flex-item body-item">
+        <view class='main-content'>
+          <view class='item-content'>
+            <view class='item-main' bindtap="powerDrawer">
+              <text>中石化-全国</text>
+              <text>{{item.name}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="flex-item body-item">
+        <view class='main-content'>
+          <view class='item-content'>
+            <view class='item-main' bindtap="powerDrawer">
+              <text>中石化-全国</text>
+              <text>{{item.name}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+
+
+
+
+
+
+      <view class="flex-item body-item">
+        <view class='main-content'>
+          <view class='item-content'>
+            <view class='item-main' bindtap="powerDrawer">
+              <text>中石化-全国</text>
+              <text>{{item.name}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="flex-item body-item">
+        <view class='main-content'>
+          <view class='item-content'>
+            <view class='item-main' bindtap="powerDrawer">
+              <text>中石化-全国</text>
+              <text>{{item.name}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="flex-item body-item">
+        <view class='main-content'>
+          <view class='item-content'>
+            <view class='item-main' bindtap="powerDrawer">
+              <text>中石化-全国</text>
+              <text>{{item.name}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+
+
+
+
+
+
+      <view class="flex-item body-item">
+        <view class='main-content'>
+          <view class='item-content'>
+            <view class='item-main' bindtap="powerDrawer">
+              <text>中石化-全国</text>
+              <text>{{item.name}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="flex-item body-item">
+        <view class='main-content'>
+          <view class='item-content'>
+            <view class='item-main' bindtap="powerDrawer">
+              <text>中石化-全国</text>
+              <text>{{item.name}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="flex-item body-item">
+        <view class='main-content'>
+          <view class='item-content'>
+            <view class='item-main' bindtap="powerDrawer">
+              <text>中石化-全国</text>
+              <text>{{item.name}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      
+    </view>
+
+    
   </view>
 </view>

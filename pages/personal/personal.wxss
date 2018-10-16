@@ -1,1 +1,79 @@
 /* pages/personal/personal.wxss */
+.container{
+width: 100%;
+height: 100%;
+padding-top: 60rpx;
+overflow-x: hidden;
+overflow-y: scroll;
+}
+.section{
+  padding-top:150rpx;
+  width: 100%;
+  height: 580rpx;
+}
+
+.scroll-view_H{
+  height:500rpx;
+  white-space: nowrap;
+  display: flex;
+
+}
+.scroll-view-item_H{
+  width:100rpx;
+  height:500rpx;
+  margin-right: 24rpx;
+  display: inline-block;
+
+}
+.scroll-view-item_H .content{
+  width: 338rpx;
+  height: 190rpx;
+  border: 1rpx solid #FFEFDB;
+}
+.title{
+  margin-top: 20rpx;
+  height:40rpx;
+  line-height:40rpx;
+  font-size: 30rpx;
+  text-align: center;
+  font-weight: 400;
+  color:#A8A8A8;
+  writing-mode: vertical-rl;
+}
+
+
+
+/**车辆显示框**/
+
+.main-content{
+  width: 100%;
+  height: 150rpx;
+  margin: 0;
+  padding: 0;
+}
+.item-content{
+  width: 96%;
+  height: 150rpx;
+  padding: 2%;
+}
+.item-main{
+  width:100%;
+  height: 100%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background: white;
+
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.item-main text{
+  font-size: 20rpx;
+}
+
+
+.blank {background: white;width:100%; height: 100rpx;}
+.body {background: #eff1f1;width:100%; height: 970rpx;}
+.body-item {background: #eff1f1;width:100%; height: 180rpx;}
