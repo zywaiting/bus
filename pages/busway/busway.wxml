@@ -8,11 +8,7 @@
       </view>
     </view>
   </view>
-</view>
 
-
-
-<view class="container">
   <view class='main-content'>
     <view class='item-content'>
       <view class='item-main' bindtap="powerDrawer">
@@ -21,15 +17,49 @@
       </view>
     </view>
   </view>
-  <view class="section section_gap">
-    <scroll-view class="scroll-view_H" scroll-x="true">
-      <view class="scroll-view-item_H" wx:for="{{buswayList}}" wx:key="{{item}}" >
-        <view  class="title" >
-          <text class='title-message' wx:if='{{item.InTime}}'>进站时间({{item.InTime}})\n</text>
-          <text class='title-message' wx:if='{{item.BusInfo}}'>车牌:{{item.BusInfo}}\n</text>
-          <text>{{item.StationCName}}</text>
+
+</view>
+
+
+
+<view class="container">
+
+  <view class="section-url">
+    <view wx:for="{{buswayList}}" wx:key="{{item}}" >
+      <view  class="title" >
+        <view>
+          <view  wx:if='{{item.BusInfo}}'>
+            <image class='bus-image' src='../../images/bus.png'></image>
+          </view>
         </view>
       </view>
-    </scroll-view>
+    </view>
   </view>
+
+  <view class="section-font">
+    <view wx:for="{{buswayList}}" wx:key="{{item}}" >
+      <view  class="title" >
+        <view>
+          <view class="font-dot">
+            <text>{{item.number}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view wx:for="{{buswayList}}" wx:key="{{item}}" >
+      <view  class="title" >
+        <view>
+          <text>{{item.StationCName}}</text>
+        </view>
+        <view>
+          <text class='title-message' wx:if='{{item.BusInfo}}'>{{item.BusInfo}}</text>
+          <text class='title-message' wx:if='{{item.InTime}}'>      {{item.InTime}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
 </view>

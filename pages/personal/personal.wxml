@@ -1,6 +1,9 @@
 <!--pages/personal/personal.wxml-->
 
-<view class="flex-item body-item">
+<view>
+  <image src='../../images/bus.png'></image>
+</view>
+<!-- <view class="flex-item body-item">
   <view class='main-content'>
     <view class='item-content'>
       <view class='item-main' bindtap="powerDrawer">
@@ -31,4 +34,4 @@
         </view>
       </scroll-view>
     </view>
-</view>
+</view> -->

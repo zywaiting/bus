@@ -2,47 +2,40 @@
 .container{
 width: 100%;
 height: 100%;
-padding-top: 60rpx;
+padding-top: 0rpx;
 overflow-x: hidden;
 overflow-y: scroll;
+flex-direction:row;
 }
 .section{
-  padding-top:150rpx;
-  width: 100%;
-  height: 460rpx;
+  padding-left: 30rpx;
+  width: 95%;
+  height: 640rpx;
+}
+.section-url{
+  padding-left: 80rpx;
+  width: 5%;
+  height: 640rpx;
+}
+.section-font{
+  padding-left: 10rpx;
+  width: 5%;
+  height: 640rpx;
+}
+.bus-image{
+  width: 40rpx;
+  height: 40rpx;
 }
 
-.scroll-view_H{
-  height:500rpx;
-  white-space: nowrap;
-  display: flex;
-
-}
-.scroll-view-item_H{
-  width:100rpx;
-  height:500rpx;
-  margin-right: 24rpx;
-  display: inline-block;
-
-}
-.scroll-view-item_H .content{
-  width: 338rpx;
-  height: 190rpx;
-  border: 1rpx solid #FFEFDB;
-}
 .title{
-  margin-top: 20rpx;
-  height:40rpx;
-  line-height:40rpx;
+  height:100rpx;
   font-size: 30rpx;
-  text-align: center;
   font-weight: 400;
-  color:#A8A8A8;
-  writing-mode:vertical-rl;
-  flex-flow: row wrap;
+  color:rgb(78, 38, 131);
 }
 .title-message{
-  font-size: 20rpx;
+  font-size: 27rpx;
+  color:red;
 }
 
 
@@ -51,7 +44,7 @@ overflow-y: scroll;
 
 .main-content{
   width: 100%;
-  height: 150rpx;
+  height: 180rpx;
   margin: 0;
   padding: 0;
 }
@@ -77,4 +70,18 @@ overflow-y: scroll;
   font-size: 20rpx;
 }
 
-.body-item {background: #eff1f1;width:100%; height: 180rpx;}
+/*数字*/
+.font-dot {
+  background-color: #db2929;
+  font-size:25rpx;
+  color: #fff;
+  line-height: 40rpx;
+  text-align: center;
+  margin-left:5rpx;
+  width:45rpx;
+  height:45rpx;
+  border-radius:50%;
+}
+
+
+.body-item {background: #eff1f1;width:100%; height: 360rpx;}
