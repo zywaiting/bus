@@ -65,7 +65,7 @@ Page({
       },
       fail: res => {
         //接口调用失败，提示用户打开定位功能
-        this.wetoast.toast({ title: '获取定位失败，请打开定位，重新进入！' });
+        wx.showToast({ title: '获取定位失败，请打开定位，重新进入！', icon: 'none' });
       }
     })
   },
@@ -124,7 +124,7 @@ Page({
       },
       fail: res => {
         //接口调用失败，提示用户打开定位功能
-        this.wetoast.toast({ title: '获取定位失败，请打开定位，重新进入！' });
+        wx.showToast({ title: '获取定位失败，请打开定位，重新进入！', icon:'none'});
       }
     })
   }
