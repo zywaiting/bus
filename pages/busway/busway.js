@@ -17,6 +17,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options);
+
     var that = this;
     that.setData({
       busid: options.busid,
@@ -41,6 +43,8 @@ Page({
         console.log("--------fail--------");
       }
     })
+    
+    that.startSetInter();
   },
 
   /**
@@ -68,7 +72,8 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    var that = this;
+    clearInterval(that.data.setInter);
   },
 
   /**
@@ -90,5 +95,30 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  startSetInter:function () {
+    var that = this;
+    //将计时器赋值给setInter
+    that.data.setInter = setInterval(
+      function  () {
+        wx.request({
+          url: app.globalData.url + '/api/busway',
+          data: {
+            openid: app.globalData.openid,
+            busid: that.data.busid,
+            crity: app.globalData.crity
+          },
+          success: function (res) {
+            console.log(res.data.data);
+            that.setData({
+              buswayList: res.data.data.data
+            })
+          },
+          fail: function (res) {
+            console.log("--------fail--------");
+          }
+        })
+      }
+    , 5000);
+   }
 })

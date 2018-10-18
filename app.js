@@ -36,6 +36,7 @@ App({
   globalData: {
     openid: null,
     url:'https://www.zhuyao.xin',
+    // url:'https://localhost',
     crity:'苏州'
   }
 })

@@ -8,7 +8,7 @@
           <view class="search">
             <view class="df search_arr">
               <icon class="searchcion" size='20' type='search'></icon>
-              <input class=""  placeholder="请输入关键字" value="{{searchValue}}"bindinput="getCarNo"/>
+              <input class=""  placeholder="请输入公交路线" value="{{searchValue}}"bindinput="getCarNo"/>
             </view>
           </view>
         <view class='sousuo' bindtap="searchCar">搜索</view>
@@ -17,22 +17,51 @@
 
     <view class="flex-item blank"></view>
 
-    
-    <view class="body">
-      <block wx:for="{{busConfigList}}">
-        <navigator url='../busway/busway?busid={{item.busId}}&busname={{item.busName}}&beginend={{item.beginEnd}}'>
-          <view class="flex-item body-item">
-            <view class='main-content'>
-              <view class='item-content'>
-                <view class='item-main' bindtap="powerDrawer">
-                  <text>{{item.busName}}</text>
-                  <text>{{item.beginEnd}}</text>
+    <view class='container'>
+      <view class=" body">
+        <view wx:if="{{busconfig}}">
+          <block wx:for="{{busConfigList}}">
+            <navigator url='../busway/busway?busid={{item.busId}}&busname={{item.busName}}&beginend={{item.beginEnd}}'>
+              <view class="flex-item body-item">
+                <view class='main-content'>
+                  <view class='item-content'>
+                    <view class='item-main' bindtap="powerDrawer">
+                      <text>{{item.busName}}</text>
+                      <text>{{item.beginEnd}}</text>
+                    </view>
+                  </view>
                 </view>
               </view>
-            </view>
-          </view>
-        </navigator>
-      </block>
+            </navigator>
+          </block>
+        </view>
+
+
+        <view wx:if="{{buswaynearby}}">
+          <block wx:for="{{buswaynearbyList}}">
+            <navigator url='../buswaynearby/buswaynearby?ID={{item.ID}}&StationCName={{item.StationCName}}'>
+              <view class="flex-item body-item">
+                <view class='main-content'>
+                  <view class='item-content'>
+                    <view class='item-main' bindtap="powerDrawer">
+                        <text>地点:{{item.Position}}</text>
+                        <text>站牌:{{item.StationCName}}</text>
+                        <text>距您:{{item.long}}米</text>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </navigator>
+          </block>
+        </view>
+      </view>
     </view>
+
+
   </view>
+</view>
+
+<!--圆形点击框  -->
+<view bindtap="getLocation">
+  <image class="round-click" src='../../images/addr.png'></image>
 </view>

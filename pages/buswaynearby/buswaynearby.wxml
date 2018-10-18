@@ -1,0 +1,17 @@
+<!--pages/buswaynearby/buswaynearby.wxml-->
+<view class="flex-item body-item">
+
+  <block wx:for="{{buswaynearbyList}}">
+    <navigator url='../busway/busway?busid={{item.busId}}&busname={{item.busName}}&beginend={{item.beginEnd}}'>
+      <view class='main-content'>
+        <view class='item-content'>
+          <view class='item-main' bindtap="powerDrawer">
+            <text>{{item.busName}}</text>
+            <text>{{item.StationCName}}</text>
+            <text>{{item.beginEnd}}</text>
+          </view>
+        </view>
+      </view>
+    </navigator>
+  </block>
+</view>

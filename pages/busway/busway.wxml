@@ -17,7 +17,13 @@
       </view>
     </view>
   </view>
+</view>
 
+<!--圆形点击框  -->
+<view>
+  <navigator url='../busway/busway?busid={{busid}}&busname={{busname}}&beginend={{beginend}}' open-type='redirect'>
+    <image class="round-click" src='../../images/suaxin.png'></image>
+  </navigator> 
 </view>
 
 
