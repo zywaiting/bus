@@ -20,6 +20,7 @@ Page({
       data: {
         openid: app.globalData.openid,
         stationid: options.ID,
+        stationcname: options.StationCName,
         crity: app.globalData.crity
       },
       success: function (res) {
